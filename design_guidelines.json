@@ -1,0 +1,123 @@
+{
+  "identity": {
+    "name": "Espaço Sow - Internal Dashboard",
+    "persona": "E1: The Anti-AI Designer",
+    "tone": "Soft Utility",
+    "description": "A clean, mobile-first internal tool for salon assistants. Replaces chaotic notes with structured, calming UI."
+  },
+  "typography": {
+    "font_family": {
+      "headings": "Outfit, sans-serif",
+      "body": "Manrope, sans-serif"
+    },
+    "weights": {
+      "headings": "600",
+      "body": "400, 500"
+    },
+    "scale": {
+      "h1": "text-3xl md:text-4xl tracking-tight",
+      "h2": "text-2xl md:text-3xl tracking-tight",
+      "h3": "text-xl md:text-2xl font-medium",
+      "body": "text-base leading-relaxed",
+      "caption": "text-sm text-muted-foreground"
+    }
+  },
+  "colors": {
+    "palette_name": "Pale Skyline",
+    "mode": "light",
+    "tokens": {
+      "background": "210 40% 98%", 
+      "foreground": "222 47% 11%",
+      "card": "0 0% 100%",
+      "card_foreground": "222 47% 11%",
+      "popover": "0 0% 100%",
+      "popover_foreground": "222 47% 11%",
+      "primary": "199 89% 48%",
+      "primary_foreground": "210 40% 98%",
+      "secondary": "210 40% 96.1%",
+      "secondary_foreground": "222 47% 11%",
+      "muted": "210 40% 96.1%",
+      "muted_foreground": "215 16% 47%",
+      "accent": "199 89% 94%",
+      "accent_foreground": "199 89% 48%",
+      "destructive": "0 84.2% 60.2%",
+      "destructive_foreground": "210 40% 98%",
+      "border": "214 32% 91%",
+      "input": "214 32% 91%",
+      "ring": "199 89% 48%"
+    },
+    "usage": {
+      "primary": "Main actions, active states, key icons",
+      "secondary": "Backgrounds for secondary cards, muted buttons",
+      "accent": "Hover states, subtle highlights",
+      "background": "Global app background (Pale Blue/Gray mix)"
+    }
+  },
+  "visual_enhancers": {
+    "radius": "1rem",
+    "shadows": {
+      "card": "0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)",
+      "floating": "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)"
+    },
+    "glassmorphism": {
+      "enabled": true,
+      "classes": "bg-white/80 backdrop-blur-md border border-white/20"
+    },
+    "gradients": {
+      "subtle_mesh": "bg-gradient-to-br from-sky-50 via-white to-slate-50"
+    }
+  },
+  "layout_strategies": {
+    "mobile_first": true,
+    "container": "max-w-md mx-auto min-h-screen bg-background shadow-2xl overflow-hidden relative",
+    "spacing": {
+      "page_padding": "p-6",
+      "section_gap": "gap-6",
+      "item_gap": "gap-4"
+    },
+    "grids": {
+      "home_menu": "grid grid-cols-2 gap-4",
+      "list_view": "flex flex-col gap-3"
+    }
+  },
+  "components": {
+    "buttons": {
+      "style": "rounded-full font-medium transition-all active:scale-95",
+      "primary": "bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg shadow-primary/20",
+      "secondary": "bg-white text-foreground border border-border hover:bg-accent hover:text-accent-foreground"
+    },
+    "cards": {
+      "style": "bg-card rounded-2xl border border-border/50 shadow-sm p-5"
+    },
+    "inputs": {
+      "style": "h-12 rounded-xl bg-secondary/50 border-transparent focus:border-primary focus:bg-white transition-all"
+    },
+    "navigation": {
+      "style": "fixed bottom-0 left-0 right-0 bg-white/90 backdrop-blur-lg border-t border-border p-4 flex justify-around items-center z-50"
+    }
+  },
+  "image_urls": {
+    "hero_bg": "https://images.unsplash.com/photo-1633681140152-3b8726450518?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHwxfHxtaW5pbWFsaXN0JTIwYmVhdXR5JTIwc2Fsb24lMjBpbnRlcmlvciUyMGJyaWdodHxlbnwwfHx8fDE3Njc4NDAzMzl8MA&ixlib=rb-4.1.0&q=85",
+    "texture_subtle": "https://images.unsplash.com/photo-1708466856406-9e3ed42107b3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDJ8MHwxfHNlYXJjaHw0fHxtaW5pbWFsaXN0JTIwYmVhdXR5JTIwc2Fsb24lMjBpbnRlcmlvciUyMGJyaWdodHxlbnwwfHx8fDE3Njc4NDAzMzl8MA&ixlib=rb-4.1.0&q=85"
+  },
+  "instructions_to_main_agent": [
+    "Implement a 'Mobile App' feel by constraining the main view to 'max-w-md mx-auto' on desktop, centered with a shadow.",
+    "Use 'lucide-react' for all icons. Pick thin, elegant strokes.",
+    "The Home Screen should be a 'Bento Grid' of the 4 main modules: Clientes Novos, Cetim, Depilação, Estoque.",
+    "Use 'sonner' for all notifications (stock alerts, success messages).",
+    "Data persistence: Use localStorage as requested. Create a simple hook 'useLocalStorage' for this.",
+    "No authentication required. Direct access.",
+    "Stock Control: Use visual alerts (red border/text) when quantity < min_quantity.",
+    "Depilação: Needs a 'drag and drop' feel or simple up/down arrows to control order.",
+    "Cetim: Needs a history log view.",
+    "Clientes Novos: Needs a 'Mark as Done' toggle."
+  ],
+  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": [
+    "Do not use generic gradients. Use the 'subtle_mesh' defined in visual_enhancers.",
+    "Ensure all touch targets are at least 44px (h-11+).",
+    "Use 'AnimatePresence' from framer-motion for smooth page transitions if possible, or simple CSS transitions.",
+    "Add 'data-testid' to all interactive elements.",
+    "Never use pure black (#000000). Use the defined foreground color.",
+    "Input fields should have 'autoComplete=\"off\"' to prevent browser clutter in this internal tool."
+  ]
+}
